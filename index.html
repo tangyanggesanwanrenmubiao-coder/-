@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>唐揚げさん (@roboxkaraage) | 公式プロフィール</title>
+  <meta name="description" content="唐揚げさん（@roboxkaraage）の公式プロフィールページ。Robloxを中心としたゲーム実況・企画動画やオリジナルゲームの制作を発信するYouTuber・クリエイター。" />
+
+  <!-- Google検索（ナレッジパネル）認識用の構造化データ -->
+  <script id="jsonld-data" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "唐揚げさん",
+    "alternateName": "@roboxkaraage",
+    "jobTitle": "YouTuber・ゲームクリエイター",
+    "description": "Robloxをメインとしたゲームプレイ・企画動画やオリジナルゲームの制作を発信するYouTuber・クリエイター。",
+    "url": "https://youtube.com/@roboxkaraage",
+    "sameAs": [
+      "https://www.youtube.com/@roboxkaraage"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #fffdf9;
+      --surface: #ffffff;
+      --text: #1f1a14;
+      --muted: #6b5f52;
+      --accent: #ea580c;
+      --accent-dark: #c2410c;
+      --accent-soft: #ffedd5;
+      --border: #f0e4d6;
+      --shadow: 0 12px 32px rgba(234, 88, 12, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      background: linear-gradient(180deg, #fff7ed 0%, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 32px 16px 96px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      border: 3px solid var(--accent);
+      display: grid;
+      place-items: center;
+      font-size: 38px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .handle {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .bio {
+      font-size: 15.5px;
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      transition: transform 0.12s ease, background 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-secondary {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .info-box {
+      background: #fffaf4;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .info-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .info-value {
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--text);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    /* 右下編集パネル */
+    .editor-fab {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 40;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 50;
+      place-items: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 20px;
+      max-width: 480px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal h3 {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #d6c7b8;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="profile-header">
+        <div class="avatar" id="avatarBox">🍗</div>
+        <div>
+          <span class="badge">YouTuber / Game Creator</span>
+          <h1 id="displayName">唐揚げさん</h1>
+          <div class="handle" id="displayHandle">@roboxkaraage</div>
+        </div>
+      </div>
+
+      <p class="bio" id="displayBio">
+        Robloxを中心としたゲーム実況・企画動画やオリジナルゲームの制作を発信するYouTuber・クリエイター。
+        視聴者との交流やフレンド募集企画、ショート動画、自作ゲームの共有などを通じて活動しています。
+      </p>
+
+      <div class="links" id="socialLinks">
+        <a class="btn btn-primary" id="ytLink" href="https://www.youtube.com/@roboxkaraage" target="_blank" rel="noopener noreferrer">
+          ▶ YouTubeチャンネル
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>基本情報</h2>
+      <div class="grid">
+        <div class="info-box">
+          <div class="info-label">活動名</div>
+          <div class="info-value">唐揚げさん</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">ハンドル</div>
+          <div class="info-value">@roboxkaraage</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">主なジャンル</div>
+          <div class="info-value">Roblox / ゲーム企画・制作</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>主なコンテンツ</h2>
+      <ul>
+        <li>Robloxのゲームプレイ・企画動画、ショート動画</li>
+        <li>視聴者参加型のフレンド募集企画</li>
+        <li>オリジナルゲームの制作・公開</li>
+      </ul>
+    </section>
+  </main>
+
+  <button class="btn btn-primary editor-fab" id="openEditorBtn" type="button">
+    ✏️ リンク編集・HTML保存
+  </button>
+
+  <div class="modal-backdrop" id="editorModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <h3 id="modalTitle">プロフィール・リンク編集</h3>
+      <div class="field">
+        <label for="inputAvatar">アイコン画像URL（任意）</label>
+        <input id="inputAvatar" type="url" placeholder="https://..." />
+      </div>
+      <div class="field">
+        <label for="inputSiteUrl">公式サイトURL（公開後に設定すると検索認識に有効）</label>
+        <input id="inputSiteUrl" type="url" placeholder="https://example.com" />
+      </div>
+      <div class="field">
+        <label for="inputXUrl">X（旧Twitter）URL（任意）</label>
+        <input id="inputXUrl" type="url" placeholder="https://x.com/..." />
+      </div>
+      <div class="field">
+        <label for="inputRobloxUrl">RobloxプロフィールURL（任意）</label>
+        <input id="inputRobloxUrl" type="url" placeholder="https://www.roblox.com/users/..." />
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="closeEditorBtn" type="button">閉じる</button>
+        <button class="btn btn-secondary" id="applyBtn" type="button">プレビュー反映</button>
+        <button class="btn btn-primary" id="downloadBtn" type="button">index.html をダウンロード</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("editorModal");
+    const openBtn = document.getElementById("openEditorBtn");
+    const closeBtn = document.getElementById("closeEditorBtn");
+    const applyBtn = document.getElementById("applyBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    openBtn.addEventListener("click", () => modal.classList.add("open"));
+    closeBtn.addEventListener("click", () => modal.classList.remove("open"));
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.remove("open");
+    });
+
+    function applyChanges() {
+      const avatarUrl = document.getElementById("inputAvatar").value.trim();
+      const siteUrl = document.getElementById("inputSiteUrl").value.trim();
+      const xUrl = document.getElementById("inputXUrl").value.trim();
+      const robloxUrl = document.getElementById("inputRobloxUrl").value.trim();
+
+      const avatarBox = document.getElementById("avatarBox");
+      if (avatarUrl) {
+        avatarBox.innerHTML = `<img src="${avatarUrl.replace(/"/g, "&quot;")}" alt="唐揚げさん アイコン" />`;
+      }
+
+      const linksContainer = document.getElementById("socialLinks");
+      linksContainer.innerHTML = `
+        <a class="btn btn-primary" href="https://www.youtube.com/@roboxkaraage" target="_blank" rel="noopener noreferrer">
+          ▶ YouTubeチャンネル
+        </a>
+      `;
+
+      const sameAs = ["https://www.youtube.com/@roboxkaraage"];
+
+      if (xUrl) {
+        sameAs.push(xUrl);
+        const a = document.createElement("a");
+        a.className = "btn btn-secondary";
+        a.href = xUrl;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "X (Twitter)";
+        linksContainer.appendChild(a);
+      }
+
+      if (robloxUrl) {
+        sameAs.push(robloxUrl);
+        const a = document.createElement("a");
+        a.className = "btn btn-secondary";
+        a.href = robloxUrl;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "Roblox";
+        linksContainer.appendChild(a);
+      }
+
+      const jsonLdEl = document.getElementById("jsonld-data");
+      const jsonLd = JSON.parse(jsonLdEl.textContent);
+      jsonLd.url = siteUrl || "https://www.youtube.com/@roboxkaraage";
+      jsonLd.sameAs = sameAs;
+      if (avatarUrl) jsonLd.image = avatarUrl;
+      jsonLdEl.textContent = JSON.stringify(jsonLd, null, 2);
+    }
+
+    applyBtn.addEventListener("click", () => {
+      applyChanges();
+      modal.classList.remove("open");
+    });
+
+    downloadBtn.addEventListener("click", () => {
+      applyChanges();
+      const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "index.html";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
